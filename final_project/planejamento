@@ -1,0 +1,148 @@
+
+1 - TRANSFORMAR EM 3D
+(X) Aprender sobre np arrays, funções básicas e como manipulá-los
+( ) Criar função: dataframe_to_tensor
+	- Transforma o df em um tensor 3D
+( ) Gerar os tensores dos 4 df:
+	- no_nan
+	- nan_mean
+	- nan_median
+	- nan_autoencoder
+( ) Persistir em h5
+
+
+2 - CLASSIFICAR NA CNN
+( ) Criar a rede classificadora
+	( ) Testar a rede no tensor sem nan
+
+
+3 - FAZER O AUTO ENCODER
+( ) Criar a CNN-autoencoder - CNN
+	( ) Fazer tutorial de autoencoder básico
+	( ) Fazer turorial de CNN-autoencoder
+	( ) Criar a arquitetura que tem a autoencoder E a rede classificadora
+	( ) Passar o tensor com nan 0
+
+
+3 - FAZER AS NAN
+( ) lib utils: função create_nan: 
+	- recebe o parâmetro de imputação
+	- aleatoriamente remove alguns dados
+	- já preenche com o parâmetro solicitado
+
+	( ) Gerar os seguintes 3 df com a função :
+		( ) sem nan. O sem nan apenas para testar a rede classificadora 3D
+		( ) com nan imputado com média
+		( ) com nan imputado com mediana
+		( ) com nan, completado com 0 (para o autoencoder)
+
+
+4 - TREINAR TODOS OS TENSORES: Com e sem NAN
+( ) Treinar
+	( ) Passar os dois tensores com imputação
+	( ) Decidir métricas
+	( ) Aferir resultados
+
+
+
+
+===================================================================
+================= Notebook - Feature engineering ==================
+===================================================================
+( ) Criar a função que roda a FT 
+	- Dá load nos dados, 
+	- Define os data types, 
+	- Lista de primitivas
+	- Cria o entity set
+	- Faz a normalização
+	- Roda a DFS
+
+( ) Persistir em h5
+	
+
+===================================================================
+================= Notebook - preparação dos dados  ================
+===================================================================
+
+
+
+
+
+
+===================================================================
+================= Notebook - Run experiments  =====================
+===================================================================
+
+
+
+
+
+
+
+
+
+==================================================================
+                             NOTAS
+==================================================================
+
+REPRESENTAÇÃO DOS DADOS EM 3D
+- Aprender um pouco sobre numpy array para decidir sobre as questões abaixo:
+	- Colocar os dados no formato 3D antes ou depois de fazer feature enginnering??
+	- Separar os dados de cada engine e depois concatenar tudo no eixo 2??
+
+
+FEATURE ENGINEERING
+- Pensar sobre colocar na feature tools ou usar a TSFresh
+	- Se sim, e me parece uma boa ideia, teria que fazer isso antes de colocar no formato 3D
+	- Fazer um teste com a FT e esses dados
+- Fazer feature engineering básico. Algumas lagged features básicas
+Não tô conseguindo usar a feature tools
+Passar
+
+
+CARALHO. Se a CNN vare a série temporal do jeito que ela está, eu preciso extrair features??
+Digo.. se o filtro vai passar na série, ela não já vai encodar as relações temporais?
+
+- descobrir um jeito de fazer feature engineering
+
+- opções:
+	- FT
+	- TSFresh
+	- Kronos: não dá pra usar a kronos.... ela gera features para a seréi planificada..
+
+
+- Fazer um kronos minha: gera features 
+ input: 
+
+- pra usar a kronos, eu preciso passar:
+	- PARA cada engine_no
+		- PARA cada features:
+			- kronos([timestamps, values])
+
+AUTOENCODER
+- Aprender a montar um autoencoder genérico: tutorial do Keras
+- Fazer o tutorial do Keras para autoencoder convolucional
+
+
+EXPERIMENTOS COM MISSING DATA
+- baseline: imputação com média
+- quando for gerar a representação com missing data, preencher missing data com 0. Isso vai simular um dropout ao desligar alguns nós da primeira camada. E isso não se configura como uma técnica de imputação de missing data
+
+
+
+REDE CLASSIFICADORA
+- Montar uma rede classificadora. Uma CNN, talvez?
+- Acho que vou ter que montar duas redes, porque para o dado não embedado, vou ter que usar algo que tenha suporte a dado 3D
+- Então acho que vai ter ser uma CNN mesmo
+
+
+
+
+CROSS VALIDATION
+- Estudar sobre como se faz CV em MVTS
+- Como resolver o cross validation?
+	- o que significa cross validation nesse contexto?
+
+
+EXTRA
+- fine tunnnig das últimas camadas: depois de treinar a representação, treinar camada por camada, ir congelando as camadas 
