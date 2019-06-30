@@ -1,13 +1,10 @@
 
 1 - TRANSFORMAR EM 3D
 (X) Aprender sobre np arrays, funções básicas e como manipulá-los
+
+>>>
 ( ) Criar função: dataframe_to_tensor
 	- Transforma o df em um tensor 3D
-( ) Gerar os tensores dos 4 df:
-	- no_nan
-	- nan_mean
-	- nan_median
-	- nan_autoencoder
 ( ) Persistir em h5
 
 
@@ -30,11 +27,18 @@
 	- aleatoriamente remove alguns dados
 	- já preenche com o parâmetro solicitado
 
+
 	( ) Gerar os seguintes 3 df com a função :
 		( ) sem nan. O sem nan apenas para testar a rede classificadora 3D
 		( ) com nan imputado com média
 		( ) com nan imputado com mediana
 		( ) com nan, completado com 0 (para o autoencoder)
+
+	( ) Gerar os tensores dos 4 df:
+		- no_nan
+		- nan_mean
+		- nan_median
+		- nan_autoencoder
 
 
 4 - TREINAR TODOS OS TENSORES: Com e sem NAN
