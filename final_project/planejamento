@@ -1,18 +1,41 @@
 
-1 - TRANSFORMAR EM 3D
+============= FEITO ============= 
 (X) Aprender sobre np arrays, funções básicas e como manipulá-los
+(X) Separar os cards
+(X) Acho que eu preciso resetar o index de cada card
+(X) Entender como é, onde colocar o label - 1 label por card
+(X) juntar o target de novo. 
+(X) Achar um cut para RUL que torne o dataset balanceado
+(X) Puta que pariu, RUL tem nan????
+(X) dataset 02 tem um RUL faltando
+(X) dar drop pna última linha dos ds 2 e 4 
+(X) criar a eng_fam para todos os ds
+(X) Re-separar os cards
 
->>>
+
+============= FALTA ============= 
+
+Domingo:
+
+( ) Tirar cards que tem tamanho 0
+( ) Cortar os cards pra padronizar o tamanho
+
+
+Segunda:
+( ) Ver o negócio da normalização estar normalizando os timestamps
 ( ) Criar função: dataframe_to_tensor
 	- Transforma o df em um tensor 3D
-( ) Persistir em h5
-
 
 2 - CLASSIFICAR NA CNN
 ( ) Criar a rede classificadora
 	( ) Testar a rede no tensor sem nan
 
+================================================================================
+================================== FIM DO MVP ==================================
+================================================================================
 
+
+----------------- Extra 1 ----------------- 
 3 - FAZER O AUTO ENCODER
 ( ) Criar a CNN-autoencoder - CNN
 	( ) Fazer tutorial de autoencoder básico
@@ -21,7 +44,10 @@
 	( ) Passar o tensor com nan 0
 
 
-3 - FAZER AS NAN
+
+Terça:
+----------------- Extra 2 ----------------- 
+4 - FAZER AS NAN
 ( ) lib utils: função create_nan: 
 	- recebe o parâmetro de imputação
 	- aleatoriamente remove alguns dados
