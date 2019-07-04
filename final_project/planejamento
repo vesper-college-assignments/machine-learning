@@ -11,24 +11,27 @@
 (X) dar drop pna última linha dos ds 2 e 4 
 (X) criar a eng_fam para todos os ds
 (X) Re-separar os cards
+(X) Tirar cards que tem tamanho 0
+(X) Identificar o menor card. Cortar os cards pra padronizar o tamanho
+(X) Criar função: dataframe_to_tensor
+	- Transforma a lista de dataframe em um tensor 3D
+(X) Separar x do y
+(X) Colocar os dados no formato (290, 1, 128, 27) [ 290 inputs, 1 de altura (uma feature), 128 de largura (timestamp), 27 channels (27 features)]
+atual: 27 x 128
+quero: 1 x 128, 27
+(X) Criar a rede classificadora: Conv2D shape(290, 1, 128, 27)
+	(X) Configurar CV
+	(X) Rodar teste com o dado todo
 
 
-============= FALTA ============= 
-
-Domingo:
-
-( ) Tirar cards que tem tamanho 0
-( ) Cortar os cards pra padronizar o tamanho
+============= TODO ============= 
+( ) Arrumar o y pra fazer sentido
+( ) Poster
 
 
-Segunda:
+Para quinta
 ( ) Ver o negócio da normalização estar normalizando os timestamps
-( ) Criar função: dataframe_to_tensor
-	- Transforma o df em um tensor 3D
-
-2 - CLASSIFICAR NA CNN
-( ) Criar a rede classificadora
-	( ) Testar a rede no tensor sem nan
+( )
 
 ================================================================================
 ================================== FIM DO MVP ==================================
